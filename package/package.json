@@ -5,7 +5,7 @@
   "license": "CC0-1.0",
   "description": "HL7 FHIR Template - for use with HL7-published FHIR IGs",
   "author": "http://hl7.org/fhir",
-  "canonical": "http://github.com/HL7/ig-template-fhir",
+  "canonical": "http://fhir.org/templates/hl7.fhir.template",
   "base": "hl7.base.template",
   "dependencies": {
     "hl7.base.template": "0.0.1" 
