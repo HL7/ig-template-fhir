@@ -12,12 +12,20 @@
       "current": true
     },
     {
+      "version": "0.3.3",
+      "desc": "Upgrade for dependency on fhir.base.template",
+      "path": "http://fhir.org/templates/hl7.fhir.template/0.3.3",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2021-09-03"
+    },
+    {
       "version": "0.3.2",
       "desc": "Fix search link",
       "path": "http://fhir.org/templates/hl7.fhir.template/0.3.2",
       "status": "release",
       "sequence": "Publications",
-      "current": true,
       "date": "2020-09-29"
     },
     {
