@@ -1,6 +1,5 @@
-{
+﻿{
   "name": "hl7.fhir.template",
-  "version": "0.0.5",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "HL7 FHIR Template - for use with HL7-published FHIR IGs",
@@ -8,6 +7,7 @@
   "canonical": "http://fhir.org/templates/hl7.fhir.template",
   "base": "hl7.base.template",
   "dependencies": {
-    "hl7.base.template": "current" 
-  }
+    "hl7.base.template": "current"
+  },
+  "version": "0.3.2"
 }
