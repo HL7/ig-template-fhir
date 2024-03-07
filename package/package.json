@@ -1,4 +1,4 @@
-﻿{
+{
   "name" : "hl7.fhir.template",
   "type" : "fhir.template",
   "license" : "CC0-1.0",
@@ -9,5 +9,5 @@
   "dependencies" : {
     "hl7.base.template" : "current"
   },
-  "version" : "0.8.0"
+  "version" : "0.9.0"
 }
