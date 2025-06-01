@@ -1,0 +1,29 @@
+Profile: PHImmunizationProfile
+Parent: Immunization
+Id: ph-immunization
+Title: "PH Immunization Profile"
+Description: "A profile for Immunization resource specific to Philippine context."
+* ^url = "urn://example.com.ph/StructureDefinition/ph-immunization"
+* vaccineCode 1..1
+* vaccineCode ^short = "Vaccine Generic Name (*eLMIS)"
+* protocolApplied 0..*
+* protocolApplied.doseNumberPositiveInt 0..1
+* protocolApplied.doseNumberPositiveInt ^short = "Dose Count"
+* status 1..1
+* status ^short = "Action Taken"
+* statusReason 0..1
+* statusReason ^short = "Action Reason"
+* occurrenceDateTime 1..1
+* occurrenceDateTime ^short = "Action Date"
+* performer 0..*
+* performer.actor 1..1
+* performer.actor.display 0..1
+* performer.actor.display ^short = "Vaccinator Name"
+* performer.actor.display ^definition = "The display name of the vaccinator."
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    administered-product named AdministeredProduct 0..1 and
+    batch-number named BatchNumber 0..1 /// and
+    /// lot-Number named LotNumber 0..1 - Why is lotNumber an extension if there is immunization.lotNumber

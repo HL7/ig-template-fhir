@@ -3,11 +3,11 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: example.fhir.ph.core
-canonical: urn://example.com/ph-core/fhir
-name: PHCoreImplementationGuide
-title: PH Core Implementation Guide
-description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
+id: seirfhirig
+canonical: urn://example.com/seirfhirig/fhir
+name: SEIRFHIRIG
+title: Immunization FHIR Implementation Guide
+description: This implementation guide is provided to support the use of FHIR®© in an Philippines context and Immunization usecase, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
