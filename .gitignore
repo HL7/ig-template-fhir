@@ -1,2 +1,8 @@
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
 /output
-.index.json
+/temp
+/template
+/.asciidoctorconfig.adoc
