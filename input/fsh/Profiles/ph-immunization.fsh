@@ -15,6 +15,8 @@ Description: "A profile for Immunization resource specific to Philippine context
 * statusReason ^short = "Action Reason"
 * occurrenceDateTime 1..1
 * occurrenceDateTime ^short = "Action Date"
+* lotNumber 1..1
+* lotNumber ^short = "Vaccine lot number"
 * performer 0..*
 * performer.actor 1..1
 * performer.actor.display 0..1
@@ -24,6 +26,5 @@ Description: "A profile for Immunization resource specific to Philippine context
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    administered-product named AdministeredProduct 0..1 and
-    batch-number named BatchNumber 0..1 /// and
-    /// lot-Number named LotNumber 0..1 - Why is lotNumber an extension if there is immunization.lotNumber
+    administered-product named AdministeredProduct 0..1 MS and
+    batch-number named BatchNumber 0..1 MS
