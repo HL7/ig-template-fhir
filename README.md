@@ -13,7 +13,7 @@ At this stage, contributions to this repository are only permitted for authorize
 
 ## Future Plans:
 
-Upon finalization of the the Official Implementation Guide, the content of this repository will be transitioned to a more appropriate and permanent location.
+Upon finalization of the Official Implementation Guide, the content of this repository will be transitioned to a more appropriate and permanent location.
 
 
 
