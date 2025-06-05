@@ -4,7 +4,7 @@ Alias: $v2-0203_1 = http://terminology.hl7.org/ValueSet/v2-0203
 Profile: PHPatientProfile
 Parent: Patient
 Id: ph-patient
-Title: "PH Patient Profile"
+Title: "PH Patient"
 Description: "A profile for Patient resource specific to Philippine context."
 * ^url = "urn://example.com.ph/StructureDefinition/PHPatientProfile"
 * extension contains

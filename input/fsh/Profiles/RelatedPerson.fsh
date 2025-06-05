@@ -1,6 +1,7 @@
 Profile: PHRelatedPersonProfile
 Parent: RelatedPerson
 Id: ph-relatedperson-profile
+Title: "PH Related Person"
 Description: "A profile for RelatedPerson resource specific to Philippine context, particularly for mother's information."
 * ^status = #draft
 * identifier 1..*

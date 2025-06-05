@@ -1,7 +1,7 @@
 Profile: PHImmunizationProfile
 Parent: Immunization
 Id: ph-immunization
-Title: "PH Immunization Profile"
+Title: "PH Immunization"
 Description: "A profile for Immunization resource specific to Philippine context."
 * ^url = "urn://example.com.ph/StructureDefinition/ph-immunization"
 * vaccineCode 1..1
