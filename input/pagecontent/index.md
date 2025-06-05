@@ -1,71 +1,36 @@
-# PH Core FHIR Implementation Guide
+# Immunization FHIR Implementation Guide
 
-<p class="dragon">This IG is provided to support a connectathon. It is prototypical, not officially endorsed and may contain any number of errors and omissions. There are no guarantees of quality or stability.</p>
+## Background
 
-[PH Core](#to-be-done) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Philippine context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
+UNICEF Philippines is actively supporting the Department of Health on Interoperability Resources Development and Electronic Medical Record Systems Capacity
+Development through a grant from the Department of Foreign Affairs and Trade (DFAT) in connection with the Australian federal government, in developing and implementing the Synchronized Electronic Immunization Repository (SEIR). 
 
-PH Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. Applications that conform to PH Core can access the following information about the patient:
+SEIR is a cloud-based system designed to capture and store individual vaccination records at the point of care. This project seeks to improve and expand SEIR to ensure seamless integration and processing of data from multiple sources, enabling its use for informed decision-making, efficient supply chain management, and easy access to personal vaccination records.
 
-- Basic patient details
-- Problems / Conditions
-- Medication orders, dispense, administration and usage
-- Immunization history
-- Allergies and intolerances
-- Diagnostic orders, report, and results
-- Vital signs, and other clinical observations
-- Clinical notes & other patient documents
+As part of the SEIR implementation, immunization data from different electronic medical record (EMR) systems are expected to be transmitted to SEIR via an interoperability framework. The Department of Health (DOH) has identified specific standards, such as HL7 FHIR, to enable this integration. To support seamless data exchange, it is necessary to develop interoperability tools and provide support and capacity-building for EMR developers, ensuring that both SEIR and connected systems can effectively communicate.
 
-PH Core provides basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined. It also documents the minimum FHIR RESTful interactions for each resource type to access patient data. PH Core promotes interoperability and adoption through common implementation and SHOULD be built on top of for standards development for specific use cases. There are two different ways to implement PH Core:
-1.  Systems may support only PH Core Profiles to represent digital health information ([Profile Only Support](#to-be-done)).
+Furthermore, UNICEF Philippines, also receives support from the Government of Japan (GoJ), who is also assisting the Department of Health (DOH) in integrating digital health technologies into the country’s healthcare system. A key focus of this work is the development and implementation of digital tools for immunization data collection and utilization. These tools are designed to help overcome persistent challenges in the immunization program, particularly in improving data completeness, timeliness, and accuracy. While national guidelines and protocols for reporting administrative data jare already in place, their implementation at the local level remains inconsistent due to varying capacities—especially in terms of digital infrastructure and the burden of existing workloads.
 
-1.  Systems may support both PH Core Profiles and the RESTful interactions defined for a resource ([Profile + Interaction Support]()).
+In light of the critical role that users play in the success of digital health initiatives particularly in the use of digital immunization tools. it is imperative to invest in the development of robust digital health literacy modules. Strengthening user capacity through these modules will be key to ensuring the effective adoption and sustained use of digital health technologies moving forward.
 
-In this regard it is similar in nature to other international FHIR specifications such as US Core FHIR Implementation Guide.
 
-For a detailed description of these different usages of PH Core, see the [Conformance Requirements](#to-be-done) and [Must Support](#to-be-done) pages.
+## Purpose:
+The ultimate objective of this engagement is to develop and implement an interoperability framework to establish integration of immunization data from different electronic medical record (EMR) systems transmitted to SEIR.
+Scope: 
+Capture all data types of immunizations received through vaccines throughout its life cycles.
 
-Below is a diagram showing where PH Core is located in the hierarchy of profiles.
+## Terminology:
 
-{% include layers.svg %}
+### Relevant Healthcare Interoperability Standards:
 
-## Did you find an error?
+#### Semantics
 
-If it's a specification error please search the issues list in the [Jira issue tracker](#to-be-done) to ensure the error was not already reported. You can use the [Propose-a-change](#to-be-done) option at the bottom of each page of the IG to trigger the creation of a Jira issue.
+PSGC, also known as the Philippine Standard Geographic Code, is a systematic classification and coding for geographic areas in the Philippines. It classifies areas based on the country's four levels of administrative divisions: regions, provinces, municipalities or cities, and barangays.
+NHFR, stands for National Health Facility Registry, which is the official, centralized database of health facilities in the Philippines. It provides a comprehensive and accurate list of all health facilities, including hospitals, clinics, and other healthcare providers. The registry is used for various purposes, including health program planning, policy development, and resource allocation. 
+Among these health facilities are hospitals, rural health units, barangay health stations, drug testing laboratories, drug abuse treatment and rehabilitation centers, kidney transplant units, newborn screening facilities, psychiatric care facilities, ambulatory surgical clinics, blood service facilities, dental laboratories, dialysis clinics, HIV testing laboratories, free standing clinics and other facilities licensed/accredited by the Health Facilities and Services Regulatory Bureau of DOH.
+LOINC, which is also known as Logical Observation Identifiers Names and Codes, is a database and universal standard for identifying medical laboratory observations. Developed in 1994 and was created and maintained by the Regenstrief Institute, a US nonprofit medical research organization. LOINC was created in response to the demand for an electronic clinical care and management database and is publicly available at no cost. It is endorsed by the American Clinical Laboratory Association. Since its inception, the database has expanded to include not just medical laboratory code names but also nursing diagnosis, nursing interventions, outcomes classification, and patient care data sets.
+SNOMED CT, expanded as Systematized Nomenclature of Medicine – Clinical Terms, is a comprehensive and standardized clinical vocabulary used in electronic health records (EHRs) to ensure accurate and consistent representation of clinical information. It serves as a global standard for healthcare information exchange, allowing healthcare providers to share and retrieve clinical data effectively. 
 
-If you've found an issue with this repository or it's contents then you please [raise a GitHub issue](https://github.com/UP-Manila-SILab/ph-core/issues/new).
+#### Syntactics: 
+HL7 FHIR, Fast Healthcare Interoperability Resources is a standard developed by Health Level Seven International (HL7) for exchanging healthcare data. It uses a modern, API-focused approach, built upon web technologies, to enable secure and efficient data sharing between different computer systems. FHIR aims to improve interoperability, support innovative applications, and ultimately enhance health outcomes. 
 
-## Contributing to PH Core Development
-
-PH Core R1 is currently in development.
-
-### 1. Join the PH Core Technical Design Group
-
-See [How to Register - Participant Information](#to-be-done)
-
-for information on how to participate in the PH Core Technical Design Group and Clinical Design Group as part of Sparked, the Philippine FHIR Accelerator. Visit the [HL7 Phillipines - PH Core Technical Design Group Home](#to-be-done)
-
-### 2. Discuss an issue in chat.fhir.org
-
-If you have a question, feature request, or proposed change, the best place to start is [Zulip](#to-be-done)
-
-stream. If what you want to discuss is specific to the Philippines you can post in the [Philippines stream](#to-be-done)
-
-### 3. Identify future work or raise discussion points
-
-To identify future work or raise discussion points, you can post in the [Philippines stream](#to-be-done) or raise [specification feedback](#to-be-done) through a [Jira issue tracker](#to-be-done).
-
-### 4. Discuss with the team
-
-Once the issue is logged, you should discuss with the team on [chat.fhir.org in the Philippines > PH Core topic](#to-be-done) before attempting to make changes yourself. It's important to coordinate with the other people working on the project.
-
-### 5. Create a pull request
-
-When everyone has agreed on a course of action, IG changes should be submitted as a pull request for review in this repository.
-
-### To be done
-
-There are lots of things that the current PH Core FHIR Implementation workgroup does not have. These things will hopefully be implemented at some point. At that point in time, these links may be maintained to point somewhere. Stay tuned.
-
-## Acknowledgements
-
-**This README text is derived from the AU Core FHIR Implementation Guide.**
