@@ -7,3 +7,6 @@ Description: "A profile for Encounter resource specific to Philippine context."
 * subject only Reference(Patient)
 * serviceType 0..1
 * serviceType ^short = "Service Type"
+* status MS
+* class MS
+* type MS
