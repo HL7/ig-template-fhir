@@ -7,7 +7,7 @@ Description: "A profile for Immunization resource specific to Philippine context
 * vaccineCode 1..1
 * vaccineCode ^short = "Vaccine Generic Name (*eLMIS)"
 * protocolApplied 0..*
-* protocolApplied.doseNumberPositiveInt 0..1
+* protocolApplied.doseNumberPositiveInt 1..1
 * protocolApplied.doseNumberPositiveInt ^short = "Dose Count"
 * status 1..1
 * status ^short = "Action Taken"
@@ -17,6 +17,8 @@ Description: "A profile for Immunization resource specific to Philippine context
 * occurrenceDateTime ^short = "Action Date"
 * lotNumber 1..1
 * lotNumber ^short = "Vaccine lot number"
+* patient 1..1
+* patient ^short = "Patient receiving immunization"
 * performer 0..*
 * performer.actor 1..1
 * performer.actor.display 0..1
