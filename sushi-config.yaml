@@ -5,9 +5,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: immunizationfhirig
 canonical: urn://example.com/seirfhirig/fhir
-name: Immunization FHIR IG
-title: Immunization FHIR Implementation Guide
-description: This implementation guide is provided to support the use of FHIR®© in an Philippines context and Immunization usecase, and defines the minimum set of constraints on the FHIR resources to create the Immunization related profiles.
+name: Draft Immunization FHIR IG
+title: Draft Immunization FHIR Implementation Guide
+description: This draft implementation guide is provided to support the use of FHIR®© in an Philippines context and Immunization usecase, and defines the minimum set of constraints on the FHIR resources to create the Immunization related profiles.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
