@@ -1,7 +1,7 @@
-Extension: BatchNumber
-Id: batch-number
+Extension: SEIRBatchNumber
+Id: seir-batch-number
 Context: Patient
-Title: "Batch Number"
+Title: "SEIR Batch Number"
 Description: "Refers to the administered vaccine’s batch number."
 * ^url = "urn://example.com.ph/StructureDefinition/batch-number"
 * value[x] only string

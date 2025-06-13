@@ -1,9 +1,9 @@
 
 
-Profile: PHImmunizationProfile
+Profile: SEIRImmunizationProfile
 Parent: Immunization
-Id: ph-immunization
-Title: "PH Immunization"
+Id: seir-immunization
+Title: "SEIR Immunization"
 Description: "A profile for Immunization resource specific to Philippine context."
 * ^url = "urn://example.com.ph/StructureDefinition/ph-immunization"
 * ^version = "1.0.0"
@@ -54,5 +54,5 @@ Description: "A profile for Immunization resource specific to Philippine context
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    administered-product named AdministeredProduct 0..1 MS and
-    batch-number named BatchNumber 0..1 MS
+    seir-administered-product named AdministeredProduct 0..1 MS and
+    seir-batch-number named BatchNumber 0..1 MS

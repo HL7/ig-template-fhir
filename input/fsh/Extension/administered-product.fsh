@@ -1,7 +1,7 @@
-Extension: AdministeredProduct
-Id: administered-product
+Extension: SEIRAdministeredProduct
+Id: seir-administered-product
 Context: Patient
-Title: "Administered Product"
+Title: "SEIR Administered Product"
 Description: "Vaccine Brandname"
 * ^url = "urn://example.com.ph/StructureDefinition/administered-product"
 * value[x] ^short = "Vaccine Brand Name (*eLMIS)"

@@ -1,7 +1,7 @@
-Profile: PHRelatedPersonProfile
+Profile: SEIRRelatedPersonProfile
 Parent: RelatedPerson
-Id: ph-relatedperson-profile
-Title: "PH Related Person"
+Id: seir-relatedperson-profile
+Title: "SEIR Related Person"
 Description: "A profile for RelatedPerson resource specific to Philippine context, particularly for mother's information."
 * ^status = #draft
 * identifier 1..*
