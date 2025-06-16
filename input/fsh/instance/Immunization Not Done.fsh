@@ -2,8 +2,9 @@ Alias: $sct = http://snomed.info/sct
 Alias: $v2-0482 = http://terminology.hl7.org/CodeSystem/v2-0482
 Alias: $immunization-status-reason = http://terminology.hl7.org/CodeSystem/immunization-status-reason
 
-Instance: ph-immunization-example-08
+Instance: SEIR-example-incomplete
 InstanceOf: Immunization
+Description: "Counseled patient on the importance of tetanus vaccination, but he remained hesitant. Advised to consider in the future."
 Usage: #example
 * meta.profile = "http://build.fhir.org/ig/UP-Manila-SILab/immunizationfhirig/branches/master/StructureDefinition-seir-immunization.html"
 * identifier.system = "urn:oid:1.2.3.4.5.6.7.8.9.17"

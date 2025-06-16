@@ -3,8 +3,9 @@ Alias: $v3-ActSite = http://terminology.hl7.org/CodeSystem/v3-ActSite
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v2-0482 = http://terminology.hl7.org/CodeSystem/v2-0482
 
-Instance: ph-immunization-example-07
+Instance: SEIR-example-catch-up
 InstanceOf: Immunization
+Description: "Child presented with incomplete vaccination records. Administered second dose of MMR as part of catch-up. Mother advised on full vaccination schedule"
 Usage: #example
 * meta.profile = "http://build.fhir.org/ig/UP-Manila-SILab/immunizationfhirig/branches/master/StructureDefinition-seir-immunization.html"
 * identifier.system = "urn:oid:1.2.3.4.5.6.7.8.9.16"
