@@ -19,7 +19,6 @@ The ultimate objective of this engagement is to develop and implement an interop
 Scope: 
 Capture all data types of immunizations received through vaccines throughout its life cycles.
 
-## Terminology:
 
 ### Relevant Healthcare Interoperability Standards:
 
