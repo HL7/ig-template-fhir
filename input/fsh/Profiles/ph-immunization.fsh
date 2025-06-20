@@ -56,3 +56,117 @@ Description: "A profile for Immunization resource specific to Philippine context
 * extension contains
     seir-administered-product named AdministeredProduct 0..1 MS and
     seir-batch-number named BatchNumber 0..1 MS
+
+// Search Parameters derived from GET Immunization Parameters - Sheet1.csv
+
+SearchParameter: region-code
+Id: region-code
+Url: http://example.org/fhir/SearchParameter/region-code
+Description: "Region code where the immunization took place"
+Type: string
+Expression: "Immunization.extension.where(url='http://hl7.org/fhir/StructureDefinition/ph-region').valueCodeableConcept.coding[0].code"
+Base: Immunization
+
+SearchParameter: province-code
+Id: province-code
+Url: http://example.org/fhir/SearchParameter/province-code
+Description: "Province code"
+Type: string
+Expression: "Immunization.extension.where(url='http://hl7.org/fhir/StructureDefinition/ph-province').valueCodeableConcept.coding[0].code"
+Base: Immunization
+
+SearchParameter: city-code
+Id: city-code
+Url: http://example.org/fhir/SearchParameter/city-code
+Description: "City code"
+Type: string
+Expression: "Immunization.extension.where(url='http://hl7.org/fhir/StructureDefinition/ph-city').valueCodeableConcept.coding[0].code"
+Base: Immunization
+
+SearchParameter: barangay-code
+Id: barangay-code
+Url: http://example.org/fhir/SearchParameter/barangay-code
+Description: "Barangay code"
+Type: string
+Expression: "Immunization.extension.where(url='http://hl7.org/fhir/StructureDefinition/ph-barangay').valueCodeableConcept.coding[0].code"
+Base: Immunization
+
+SearchParameter: vaccine-code-generic
+Id: vaccine-code-generic
+Url: http://example.org/fhir/SearchParameter/vaccine-code-generic
+Description: "Generic vaccine name (e.g., COVID19)"
+Type: string
+Expression: "Immunization.vaccineCode.coding.where(system='http://hl7.org/vaccination-generic-name').code"
+Base: Immunization
+
+SearchParameter: vaccine-code-brand
+Id: vaccine-code-brand
+Url: http://example.org/fhir/SearchParameter/vaccine-code-brand
+Description: "Brand of vaccine (e.g., Pfizer)"
+Type: string
+Expression: "Immunization.vaccineCode.coding.where(system='http://hl7.org/vaccination-brand').code"
+Base: Immunization
+
+SearchParameter: batch-number
+Id: batch-number
+Url: http://example.org/fhir/SearchParameter/batch-number
+Description: "Vaccine batch number(s) used"
+Type: string
+Expression: "Immunization.extension.where(url='http://example.org/fhir/StructureDefinition/batch-lot').valueString"
+Base: Immunization
+
+SearchParameter: lot-number
+Id: lot-number
+Url: http://example.org/fhir/SearchParameter/lot-number
+Description: "Lot number(s) of the vaccine"
+Type: string
+Expression: "Immunization.lotNumber"
+Base: Immunization
+
+SearchParameter: action-code
+Id: action-code
+Url: http://example.org/fhir/SearchParameter/action-code
+Description: "Code representing immunization action (e.g., [Vaccinate, Refuse, Defer])"
+Type: string
+Expression: "Immunization.extension.where(url='http://example.org/fhir/StructureDefinition/action-code').valueString"
+Base: Immunization
+
+SearchParameter: date-ge
+Id: date-ge
+Url: http://example.org/fhir/SearchParameter/date-ge
+Description: "Start of date range (greater than or equal to)"
+Type: date
+Expression: "Immunization.occurrenceDateTime"
+Base: Immunization
+
+SearchParameter: date-le
+Id: date-le
+Url: http://example.org/fhir/SearchParameter/date-le
+Description: "End of date range (less than or equal to)"
+Type: date
+Expression: "Immunization.occurrenceDateTime"
+Base: Immunization
+
+SearchParameter: location
+Id: location
+Url: http://example.org/fhir/SearchParameter/location
+Description: "Facility Code"
+Type: reference
+Expression: "Immunization.location"
+Base: Immunization
+
+SearchParameter: patient
+Id: patient
+Url: http://example.org/fhir/SearchParameter/patient
+Description: "Patient UUID"
+Type: reference
+Expression: "Immunization.patient"
+Base: Immunization
+
+SearchParameter: patient-gender
+Id: patient-gender
+Url: http://example.org/fhir/SearchParameter/patient-gender
+Description: "Patient gender (used via joined Patient resource)"
+Type: string
+Expression: "Immunization.patient.gender"
+Base: Immunization
