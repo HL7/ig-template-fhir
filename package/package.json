@@ -9,5 +9,5 @@
   "dependencies" : {
     "hl7.base.template" : "current"
   },
-  "version" : "0.10.1"
+  "version" : "1.0.0"
 }
